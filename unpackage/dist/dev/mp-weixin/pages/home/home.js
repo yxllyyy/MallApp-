@@ -1,13 +1,45 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
-require("../../store/home.js");
+const store_home = require("../../store/home.js");
 require("../../service/home.js");
 require("../../service/index.js");
+if (!Math) {
+  (HomeBanner + HomeRecommend + HomeProfile + TabControl)();
+}
+const HomeBanner = () => "./cpns/home-banner2.js";
+const HomeRecommend = () => "./cpns/home-recommend.js";
+const HomeProfile = () => "./cpns/home-profile.js";
+const TabControl = () => "../../components/tab-control/tab-control.js";
 const _sfc_main = {
   __name: "home",
   setup(__props) {
+    const homeStore = store_home.useHomeStore();
+    const { banners, recommends } = common_vendor.storeToRefs(homeStore);
+    common_vendor.onLoad(() => {
+      homeStore.fetchHomeMultidata();
+    });
+    function handleBannerItemClick(link) {
+      common_vendor.index.navigateTo({
+        url: "/pages/webview/webview?link=" + link
+      });
+    }
+    function handleTabItemClick(index) {
+      console.log(index);
+    }
     return (_ctx, _cache) => {
-      return {};
+      return {
+        a: common_vendor.o(handleBannerItemClick),
+        b: common_vendor.p({
+          banners: common_vendor.unref(banners)
+        }),
+        c: common_vendor.p({
+          recommends: common_vendor.unref(recommends)
+        }),
+        d: common_vendor.o(handleTabItemClick),
+        e: common_vendor.p({
+          titles: ["\u6D41\u884C", "\u65B0\u6B3E", "\u7CBE\u9009"]
+        })
+      };
     };
   }
 };

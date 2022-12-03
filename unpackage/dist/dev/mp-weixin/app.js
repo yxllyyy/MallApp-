@@ -7,6 +7,8 @@ if (!Math) {
   "./pages/cart/cart.js";
   "./pages/profile/profile.js";
   "./pages/detail/detail.js";
+  "./pages/home/cpns/home-banner.js";
+  "./pages/webview/webview.js";
 }
 const _sfc_main = {
   onLaunch: function() {

@@ -1,4 +1,9 @@
 {
   "onReachBottomDistance": 300,
-  "usingComponents": {}
+  "usingComponents": {
+    "home-banner": "./cpns/home-banner",
+    "home-recommend": "./cpns/home-recommend",
+    "home-profile": "./cpns/home-profile",
+    "tab-control": "../../components/tab-control/tab-control"
+  }
 }
