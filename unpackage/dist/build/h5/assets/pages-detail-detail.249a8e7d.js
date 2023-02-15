@@ -1,0 +1,1 @@
+import{h as a,o as t,c as e,i}from"./index.bbf2f42f.js";const s={__name:"detail",props:{iid:String,default:""},setup:s=>(a("log","at pages/detail/detail.vue:13",s.iid),(a,s)=>{const d=i;return t(),e(d)})};export{s as default};

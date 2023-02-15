@@ -3,7 +3,7 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"onReachBottomDistance": 300
+				"onReachBottomDistance": 500
 			}
 		}, {
 			"path": "pages/category/category",
@@ -44,6 +44,16 @@
             "path" : "pages/webview/webview",
             "style" :                                                                                    
             {
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        ,{
+            "path" : "components/grid-view-item/grid-view-item",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             

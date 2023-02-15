@@ -9,6 +9,7 @@ if (!Math) {
   "./pages/detail/detail.js";
   "./pages/home/cpns/home-banner.js";
   "./pages/webview/webview.js";
+  "./components/grid-view-item/grid-view-item.js";
 }
 const _sfc_main = {
   onLaunch: function() {
